@@ -34,7 +34,7 @@ int main() {
     std::cout << std::endl;
 
     l.insert(0, 33);
-    l.insert(1, 14);
+    l.insert(2, 14);
     
     std::cout << l << std::endl;
     std::cout << "size(): " << l.size() << std::endl;
