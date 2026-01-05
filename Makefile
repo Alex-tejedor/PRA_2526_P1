@@ -13,10 +13,15 @@ bin/testListLinked: testListLinked.cpp ListLinked.h List.h Node.h
 	mkdir -p bin
 	g++ -o bin/testListLinked testListLinked.cpp ListLinked.h
 
+# Regla para Point2D
 bin/testPoint2D: testPoint2D.cpp Point2D.o
 	g++ -c testPoint2D.cpp
 	mkdir -p bin
 	g++ -o bin/testPoint2D testPoint2D.o Point2D.o
 
+# Regla para Shape
+Shape.o: Shape.h Shape.cpp
+
+	g++ -c Shape.cpp
 clean:
 	rm -r *.o *.gch bin
