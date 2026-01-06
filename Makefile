@@ -46,5 +46,10 @@ bin/testRectangle: testRectangle.cpp Rectangle.o Shape.o Point2D.o
 Square.o: Square.h Square.cpp Rectangle.h Shape.h Point2D.h
 	g++ -c Square.cpp
 
+# Regla para testSquare
+bin/testSquare: testSquare.cpp Square.o Rectangle.o Shape.o Point2D.o
+	mkdir -p bin
+	g++ -o bin/testSquare testSquare.cpp Square.o Rectangle.o Shape.o Point2D.o
+
 clean:
 	rm -r *.o *.gch bin
